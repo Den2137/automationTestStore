@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh 'npm run allure:generateReport'
                 allure(
-                    results: [['allure-results']]
+                    results: [[path: 'allure-results']]
                 )
                 // 
             }
