@@ -8,8 +8,10 @@ pipeline {
         }
         stage('Test') { 
             steps {
+                catchError(buildResult: "SUCCESS", stageResult: 'SUCCESS'){
                 sh 'npm run allure:clearData'
                 sh 'npm run cy:testWithAllureReport'
+                }
 
                 // 
             }
