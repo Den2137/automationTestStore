@@ -1,0 +1,86 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-15T17:49:56.732Z",
+    "end": "2023-06-15T17:50:07.697Z",
+    "duration": 10965,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e01957e-dc7f-4e13-9469-f37d052a7170",
+      "title": "",
+      "fullFile": "cypress\\e2e\\order.cy.js",
+      "file": "cypress\\e2e\\order.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Order",
+          "fullTitle": "Order",
+          "timedOut": null,
+          "duration": 10894,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "(0, _helper.login)(_user.default);\ncy.get('#filter_keyword').type('i').closest(\"form\").submit();\n//findNewProd('Gucci Guilty') //Benefit Bella Bamba\n(0, _helper.findProduct)('Benefit Bella Bamba'); //Benefit Bella Bamba\ncy.get('.productpagecart').click();\ncy.get('#cart_checkout1').click();\ncy.get('#checkout_btn').click();\ncy.get('.contentpanel').should('contain', \"Thank you for shopping with us!\");",
+          "err": {},
+          "uuid": "3ea38f1e-933b-4708-8962-7528e28f6a03",
+          "parentUUID": "5e01957e-dc7f-4e13-9469-f37d052a7170",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "3ea38f1e-933b-4708-8962-7528e28f6a03"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 10894,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
